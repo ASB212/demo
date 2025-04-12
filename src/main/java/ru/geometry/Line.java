@@ -2,10 +2,10 @@ package ru.geometry;
 
 
 public class Line {
-    Tochka start;
-    Tochka end;
+    MyPoint start;
+    MyPoint end;
 
-    public Line(Tochka start, Tochka end) {
+    public Line(MyPoint start, MyPoint end) {
         this.start = start;
         this.end = end;
 
@@ -20,13 +20,13 @@ public class Line {
     }
 
     public static void path(String[] args) {
-        Line line1 = new Line(Tochka.A, Tochka.B);
-        Line line2 = new Line(Tochka.C, Tochka.E);
-        Line line3 = new Line(Tochka.B, Tochka.C);
+        Line line1 = new Line(MyPoint.A, MyPoint.B);
+        Line line2 = new Line(MyPoint.C, MyPoint.E);
+        Line line3 = new Line(MyPoint.B, MyPoint.C);
 
         System.out.println(line3);
 
-        line3 = new Line((new Tochka(Tochka.B.x + 1, Tochka.B.y + 1)), (new Tochka(Tochka.C.x + 1, Tochka.C.y + 1)));
+        line3 = new Line((new MyPoint(MyPoint.B.x + 1, MyPoint.B.y + 1)), (new MyPoint(MyPoint.C.x + 1, MyPoint.C.y + 1)));
 
         System.out.println("Обновленная " + line3);
 
